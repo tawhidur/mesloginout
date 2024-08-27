@@ -16,8 +16,8 @@ describe('Login and logout', () => {
 
   // Test case: Error with incorrect password
   it('should display an error with incorrect password', () => {
-    cy.get('input[name="username"]').type('Test!@@@@');
-    cy.get('input[name="password"]').type('Test@Ping');
+    cy.get('input[name="username"]').type('Bro Test!!!');
+    cy.get('input[name="password"]').type('Bro Pass!');
     cy.get('.login-footer').children().last().click();
     cy.contains('Unable to login').should('be.visible');
   });
